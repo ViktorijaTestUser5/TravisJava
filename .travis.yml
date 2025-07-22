@@ -3,7 +3,6 @@
   deploy:
     provider: # enter your provider details here
     dpl_version: 2.1.1
-  
 
 
   
