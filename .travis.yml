@@ -2,7 +2,7 @@
   os: windows
   deploy:
     provider: # enter your provider details here
-    dpl_version: 1.10.16
+    dpl_version: 2.1.1
   
 
 
