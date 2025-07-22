@@ -1,8 +1,8 @@
-os: linux
-
 language: java
+
 services:
   - docker
+
 cache: bundler
 dist: bionic
 
@@ -11,6 +11,7 @@ install: skip
 jobs:
   include:
     - name: failing
+      os: linux
       script: true
 
     - name: windows deploy
@@ -18,11 +19,11 @@ jobs:
       install: skip
       script: echo "Running on Windows"
       deploy:
-        provider: # enter your provider details here
-        dpl_version: 2.1.1
+        provider: script
+        script: echo "Deploying from Windows"
+        on:
+          branch: main
 
 after_success:
   - echo done
   - echo $TRAVIS_TEST_RESULT
-afte
-
