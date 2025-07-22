@@ -1,29 +1,13 @@
-language: java
-
-services:
-  - docker
-
-cache: bundler
-dist: bionic
-
-install: skip
+language: generic
 
 jobs:
   include:
-    - name: failing
+    - name: simple deploy job
       os: linux
-      script: true
-
-    - name: windows deploy
-      os: windows
-      install: skip
-      script: echo "Running on Windows"
+      script: echo "Build complete"
       deploy:
         provider: script
-        script: echo "Deploying from Windows"
+        script: echo "Deploying..."
+        dpl_version: 2.0.0
         on:
           branch: main
-
-after_success:
-  - echo done
-  - echo $TRAVIS_TEST_RESULT
