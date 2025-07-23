@@ -10,7 +10,7 @@ jobs:
       token: "$GITHUB_APIKEY"
       file: "$FILE_NAME"
       skip_cleanup: true
-      dpl_version: 2.0.3.beta.5
+      dpl_version: 2.0.3.beta.4
       on:
         tags: false
 os: linux
