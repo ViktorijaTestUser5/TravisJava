@@ -17,7 +17,7 @@ jobs:
       deploy:
         provider: script
         script: echo "Deploying from Windows"
-        dpl_version: 1.10.16
+        dpl_version: 2.0.0
         on:
           branch: main
 
