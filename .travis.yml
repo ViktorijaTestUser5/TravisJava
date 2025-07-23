@@ -10,10 +10,6 @@ install: skip
 
 jobs:
   include:
-    - name: failing
-      os: linux
-      script: true
-
     - name: windows deploy
       os: windows
       install: skip
