@@ -12,15 +12,17 @@ jobs:
   include:
     - name: windows deploy
       os: windows
+      language: shell  # Override 'java' (unsupported on Windows)
       install: skip
       script: echo "Running on Windows"
       deploy:
         provider: script
         script: echo "Deploying from Windows"
-        dpl_version: 2.0.0
         on:
           branch: main
+        dpl_version: 2.0.0
 
 after_success:
   - echo done
   - echo $TRAVIS_TEST_RESULT
+
